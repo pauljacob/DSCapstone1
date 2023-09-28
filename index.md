@@ -1,7 +1,5 @@
 [Front Page]() | [DSCapstone1](https://pauljacob.github.io/DSCapstone1/) | [DSCapstone2](https://pauljacob.github.io/DSCapstone2/)
 
-![cover_photo](./readme_files/nba_logo.jpeg)
-Image credit: [NBA.com](https://www.nba.com)
 # NBA Game Score Difference Prediction
 
 *In this project, we predicted the score difference of NBA games to provide the data point of a good model for retail NBA sportsbook bettors. We did this using a random forest regression model for score difference. Using a simple betting policy for the 6-month 2017-18 regular season, we find our model correctly predicted at a rate of 68% and had an ROI of 11%.*
