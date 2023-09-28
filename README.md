@@ -1,4 +1,3 @@
-![cover_photo](./readme_files/nba_logo.jpeg)
 # NBA Game Score Difference Prediction
 
 *In this project, we attempt to predict the spread of NBA games to provide the data point of a good model for retail NBA sportsbook bettors. We do this using a random forest regression model for spread. Using a simple betting policy for the 6-month 2017-18 regular season, we find our model correctly predicts at a rate of 68% and has an ROI of 11%.*
