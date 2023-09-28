@@ -1,14 +1,16 @@
+[DSCapstone1](https://pauljacob.github.io/DSCapstone1/) | [DSCapstone2](https://pauljacob.github.io/DSCapstone2/)
+
 # NBA Game Score Difference Prediction
 
-*In this project, we attempt to predict the spread of NBA games to provide the data point of a good model for retail NBA sportsbook bettors. We do this using a random forest regression model for spread. Using a simple betting policy for the 6-month 2017-18 regular season, we find our model correctly predicts at a rate of 68% and has an ROI of 11%.*
+*In this project, we predicted the score difference of NBA games to provide the data point of a good model for retail NBA sportsbook bettors. We did this using a random forest regression model for score difference. Using a simple betting policy for the 6-month 2017-18 regular season, we find our model correctly predicted at a rate of 68% and had an ROI of 11%.*
 
 *Basketball is the third most popular sport for betting on globally. Of basketball leagues, the NBA is the most bet on. There are a variety of strategies used by NBA sports bettors in attempting to turn a profit. One strategy is called subjective handicapping where a point compensation is made for the team favorite/underdog. Other strategies include finding microholds, 0% holds, or negative holds in synthetic markets.*
 
-*Using the team stat, team lost contribution, and GDP datasets, we predicted NBA game spread with a Mean Absolute Error (MAE) of 9.7. Using confidence intervals for spread and betting data, a simple betting policy is made. Metrics such as betting accuracy, ROI, and risk of bankruptcy are observed.*
+*Using the team stat, team lost contribution, and GDP datasets, we predicted NBA game score difference with a Mean Absolute Error (MAE) of 9.7. Using confidence intervals for score difference and betting data, a simple betting policy is made. Metrics such as betting accuracy, ROI, and risk of bankruptcy are observed.*
 
 ## 1. Data
 
-Three data sources are used to aggregate a dataset for the NBA game spread prediction on the 2010-11 thru 2017-18 seasons: nba_api, Kaggle, and Wikipedia. Below, our data sources are further described by feature groups.
+Three data sources are used to aggregate a dataset for the NBA game score prediction on the 2010-11 thru 2017-18 seasons: nba_api, Kaggle, and Wikipedia. Below, our data sources are further described by feature groups.
 
 
 > * Team Stats: [nba_api Team Advanced Stats Dataset](https://github.com/swar/nba_api), [Kaggle Game Dataset](https://www.kaggle.com/nathanlauga/nba-games?select=games.csv), [Kaggle Boxscore Dataset](https://www.kaggle.com/ehallmar/nba-historical-stats-and-betting-data?select=nba_games_all.csv), [Kaggle Team Name-Abbreviation Dataset1](https://www.kaggle.com/nathanlauga/nba-games?select=teams.csv), [Kaggle Team Name-Abbreviation Dataset2](https://www.kaggle.com/gabrielmanfredi/nba-retro-1995-to-2000-full-basketball-datasets)
@@ -28,7 +30,7 @@ Three data sources are used to aggregate a dataset for the NBA game spread predi
 Our objective was to determine whether to place a bet on an NBA game or not. The ramifications in attempting to answer this question led us to decide between the following models:
 
 
-1. Build a regression model for predicting spread. Then build a simple policy for betting on NBA games (to return accuracy and ROI).
+1. Build a regression model for predicting score difference. Then build a simple policy for betting on NBA games (to return accuracy and ROI).
 
 2. Build a classification model for predicting winning and losing bets.
 
@@ -61,7 +63,7 @@ Random Forest Regression was used from the scikit-learn library and performed th
 
 ![](./readme_files/metrics.png)
 
->***NOTE:** Here, the first 90% of games were used to predict the last 10% of games. Also, Mean Absolute Error (MAE) is the criterion used in our Random Forest Regression model. Preference is given to the MAE metric because we want the number of points away our predicted spread is from the actual spread and to minimize it.*
+>***NOTE:** Here, the first 90% of games were used to predict the last 10% of games. Also, Mean Absolute Error (MAE) is the criterion used in our Random Forest Regression model. Preference is given to the MAE metric because we want the number of points away our predicted score difference is from the actual spread and to minimize it.*
 
 
 
@@ -79,12 +81,12 @@ grid_params = {<br />
 
 In comparing our MAE to that of the sportsbooks, we achieved an MAE of 9.7 while that of the book was 9.3. Knowing that we did not beat the sportsbook model metric MAE, we were forced to ask how useful is a seemingly inferior model?
 
-To answer this, we decided to make a simple betting policy that attempted to give a good ROI while minimizing risk. One of the features we created for this task is the confidence interval for predicted spread. This was done by taking the bootstrap n=8 mean of Random Forest decision tree predictions. Below is an example spread distribution for an NBA game.
+To answer this, we decided to make a simple betting policy that attempted to give a good ROI while minimizing risk. One of the features we created for this task is the confidence interval for predicted score difference. This was done by taking the bootstrap n=8 mean of Random Forest decision tree predictions. Below is an example score difference distribution for an NBA game.
 
 
 ![](./readme_files/bootstrap_n8_decision_tree_spread_prediction_density_plot_v2.png)
 
-In addition to the spread confidence interval, we created sportsbook betting features  price break even and the absolute value of spread.
+In addition to the score difference confidence interval, we created sportsbook betting features price break even and the absolute value of spread.
 
 
 
