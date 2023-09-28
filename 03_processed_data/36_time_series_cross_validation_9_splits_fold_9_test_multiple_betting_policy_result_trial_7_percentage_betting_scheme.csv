@@ -1,0 +1,16 @@
+  ,   , 
+initial conditions,percentage_of_account_balance_per_bet,1
+initial conditions,percent_confidence_interval_place_bet_yes_no,9
+initial conditions,spread1_abs_lower_limit,9.5
+initial conditions,price_break_even_upper_limit,"[0.5098039215686274, 0.5121951219512195]"
+results,number_of_bets_placed,97
+results,game_bet_opportunities_bet_on_percentage,9.45
+results,games_bet_on_winning_bet_percentage,70.1
+results,games_bet_on_winning_bet_percentage_push_adjusted,70.1
+results,winning_bet_no_streak,4
+results,winning_bet_yes_streak,17
+results,largest_bet_gain,14.09
+results,largest_bet_loss,-14.51
+results,roi_min,-0.01
+results,roi_max,0.45
+results,roi_final,0.45
